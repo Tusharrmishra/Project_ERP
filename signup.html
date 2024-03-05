@@ -13,53 +13,54 @@
       <title>Sign Up</title>
    </head>
    <body>
-      <div class="login">
-         <img src="images/background.png" alt="login image" class="login__img">
+      <div class="signin">
+         <img src="img1.png" alt="signin image" class="signin__img">
+         <div  class="logo"><a href="index.html"><img src="logo.jpg" alt=""></a></div>
+         
+         <form action="" class="signin__form">
+            <h1 class="signin__title">Sign Up</h1>
 
-         <form action="" class="login__form">
-            <h1 class="login__title">Sign Up</h1>
+            <div class="signin__content">
+              <div class="signin__box">
+                  <i class="ri-user-3-line signin__icon"></i>
 
-            <div class="login__content">
-              <div class="login__box">
-                  <i class="ri-user-3-line login__icon"></i>
-
-                  <div class="login__box-input">
-                     <input type="email" required class="login__input" id="login-email" placeholder=" ">
-                     <label for="login-email" class="login__label">Username</label>
+                  <div class="signin__box-input">
+                     <input type="email" required class="signin__input" id="signin-email" placeholder=" ">
+                     <label for="signin-email" class="signin__label">Username</label>
                   </div>
                </div>
 
-               <div class="login__box">
-                  <i class="ri-user-3-line login__icon"></i>
+               <div class="signin__box">
+                  <i class="ri-user-3-line signin__icon"></i>
 
-                  <div class="login__box-input">
-                     <input type="email" required class="login__input" id="login-email" placeholder=" ">
-                     <label for="login-email" class="login__label">Email</label>
+                  <div class="signin__box-input">
+                     <input type="email" required class="signin__input" id="signin-email" placeholder=" ">
+                     <label for="signin-email" class="signin__label">Email</label>
                   </div>
                </div>
 
-               <div class="login__box">
-                  <i class="ri-lock-2-line login__icon"></i>
+               <div class="signin__box">
+                  <i class="ri-lock-2-line signin__icon"></i>
 
-                  <div class="login__box-input">
-                     <input type="password" required class="login__input" id="login-pass" placeholder=" ">
-                     <label for="login-pass" class="login__label">Create a Password</label>
-                     <i class="ri-eye-off-line login__eye" id="login-eye"></i>
+                  <div class="signin__box-input">
+                     <input type="password" required class="signin__input" id="signin-pass" placeholder=" ">
+                     <label for="signin-pass" class="signin__label">Create a Password</label>
+                     <i class="ri-eye-off-line signin__eye" id="signin-eye"></i>
                   </div>
                </div>
             </div>
 
 
-            <button type="submit" class="login__button">Sign Up</button>
+            <button type="submit" class="signin__button">Sign Up</button>
 
          </form>
     </div>
       
       <!--=============== MAIN JS ===============-->
       <script>
-        const showHiddenPass = (loginPass, loginEye) =>{
-            const input = document.getElementById(loginPass),
-                  iconEye = document.getElementById(loginEye)
+        const showHiddenPass = (signinPass, signinEye) =>{
+            const input = document.getElementById(signinPass),
+                  iconEye = document.getElementById(signinEye)
          
             iconEye.addEventListener('click', () =>{
                // Change password to text
@@ -81,7 +82,7 @@
             })
          }
          
-         showHiddenPass('login-pass','login-eye')
+         showHiddenPass('signin-pass','signin-eye')
       </script>
    </body>
 </html>
