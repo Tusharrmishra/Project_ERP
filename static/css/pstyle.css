@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 45%;
+    color: #fff;
+    
+}
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .profile-card, .details-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .profile-card {
+    margin-right: 20px;
+  }
+  
+  .profile-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .details-card {
+    width: 300px;
+  }
+  
+  .details-card h2 {
+    margin-top: 0;
+  }
+  
+  .details-card p {
+    margin: 10px 0;
+  }
+  .upgrade-button {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .upgrade-button button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .upgrade-button button:hover {
+    background-color: #3e8e41;
+  }  

@@ -1,0 +1,334 @@
+/* Add your custom styles here */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --dark-blue: #11101d;
+  --white-blue: #1d1d31;
+  --white: #fff;
+  --gray: #8390a2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  padding-left: 20px;
+  background: var(--dark-blue);
+  transition: all 0.5s ease;
+  z-index: 99;
+}
+
+.sidebar .logo_details {
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar li {
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+
+/* .sidebar img {
+  position: relative;
+  height: 40px;
+  min-width: 30px;
+  font-size: 28px;
+  line-height: 60px;
+  text-align: center;
+  color: var(--white);
+} */
+
+.sidebar .logo_details .logo_name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  transition: all 0.5s ease;
+}
+
+.sidebar ul li a i {
+  position: relative;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+}
+
+.sidebar ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 30px 0px 0px 30px;
+  transition: all 0.5s ease;
+}
+
+.sidebar ul li a .links_name {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--white);
+  transition: 0.4s;
+}
+
+.sidebar li.login {
+  position: fixed;
+  width: 250px;
+  height: 60px;
+  left: 0;
+  bottom: -8px;
+  padding: 20px 20px;
+  background: var(--white-blue);
+  transition: all 0.5s ease;
+}
+
+.sidebar .login #log_out {
+  position: absolute;
+  height: 60px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 60px;
+  transition: all 0.5s ease;
+}
+
+.sidebar li a.active {
+  background: var(--white);
+}
+
+.sidebar li a:hover {
+  background: var(--white);
+}
+
+.sidebar li a.active .links_name,
+.sidebar li a.active i {
+  color: var(--dark-blue);
+}
+
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i {
+  color: var(--dark-blue);
+}
+
+.sidebar li.login a:hover {
+  background: none;
+}
+
+.sidebar li.login a:hover .links_name,
+.sidebar li.login a:hover i {
+  color: var(--white);
+}
+
+.sidebar.open,
+.sidebar.open li.login {
+  width: 78px;
+}
+
+.sidebar.open .logo_name,
+.sidebar.open .links_name {
+  opacity: 0;
+}
+
+.sidebar.open .logo_details #btn {
+  text-align: right;
+}
+
+.sidebar.open ~ .home_section {
+  width: calc(100% - 78px);
+  left: 78px;
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  margin-bottom: 20px;
+  background-color: #333;
+  color: #f3f3f3;
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 45%;
+  color: #d6d6e7;
+}
+
+.row py-5 {
+  margin-top: 20px;
+}
+.card {
+  border-radius: 10px;
+}
+
+.sales,
+.profit,
+.top {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.fa-search {
+  margin-top: 5px;
+}
+
+#result {
+  margin-top: 20px;
+  padding-top: 30px;
+}
+
+/* Additional Bootstrap overrides or custom styles can be added here */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  background-color: lightgrey;
+}
+
+th {
+  background-color: aliceblue;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-bottom: 40px;
+}
+.grid-item {
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.button-style {
+  align-items: center;
+  appearance: none;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(47, 37, 68, 0.4) 0 2px 4px,
+    rgba(44, 29, 75, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.button-style:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+.button-style:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-style:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin-top: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.back-icon {
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.back-link:hover {
+  color: #0008ff;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="x-icon" href="../static/images/logo.png" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/about_us.css" />
+
+    <title>About Us</title>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="logo">
+        <a href="../template/index.html"
+          ><img src="../static/images/logo.png"
+        /></a>
+      </div>
+      <div class="box">
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="/index">Home</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            {% if 'username' in session %}
+            <li><a href="#"> {{ session['username'] }}</a></li>
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
+            <a href="/login" class="btn">Login</a>
+            <!-- Modified Login link -->
+            <a href="/signup" class="btn btn-primary">Sign Up</a>
+            <!-- Modified Sign Up link -->
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="about-area">
+      <div class="container">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            We offer revolutionary solution to industry problems.<br />
+            Join ERP Builder community and experience the<br />
+            benefits of company optimization today!
+          </p>
+        </div>
+        <div class="about-img">
+          <img src="../static/images/img1.jpeg" alt="" />
+        </div>
+        <div class="text">
+          <h2>Our Mission</h2>
+          <p>
+            At ERP Builder, we are committed to providing excellent services to
+            our customers and clients and to help them achieve the best
+            outcomes. We believe that we can make a positive impact on our
+            community, industry and the world. Our ERP Builder team is dedicated
+            to providing the best possible service and support, and we are
+            always looking for ways to improve and innovate.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="txt1">
+              <h2>Let's start working more efficiently today!</h2>
+            </div>
+          </div>
+          <div class="col-lg-6 col-lg-offset-3">
+            <div class="txt-img">
+              <img src="../static/images/img2.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="text-team">
+          <h2>Team</h2>
+          <p>Meet the people behind our magical product</p>
+        </div>
+        <div class="team">
+          <div class="row2">
+            <div class="col-lg-2">
+              <div class="tm-img">
+                <img src="../static/images/img4.png" alt="" />
+                <h3>Atharva</h3>
+              </div>
+            </div>
+            <div class="col-lg-2 col-lg-offset-3">
+              <div class="tm2-img">
+                <img src="../static/images/img4.png" alt="" />
+                <h3>Tushar</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box1">
+            <h2>Get Started with ERP Builder Today</h2>
+            <p>Start optimizing our process today</p>
+            <a href="../template/signup.html" class="btn2"> Sign Up Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="col">
+          <img src="../static/images/logo.png" class="logo1" />
+          <p></p>
+        </div>
+        <div class="col">
+          <ul>
+            <li><a href="../template/index.html">Home</a></li>
+            <li><a href="../template/pricing.html">Pricing</a></li>
+            <li><a href="../template/about_us.html">About Us</a></li>
+            <li><a href="../template/contact_us.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="social-icons">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/"><img src="" />Facebook</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/"><img src="" />Twitter</a>
+            </li>
+            <li>
+              <a href="https://www.whatsapp.com/"><img src="" />What's App</a>
+            </li>
+            <li>
+              <a href="https://www.discord.com/"><img src="" />Discord</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <ul>
+            <li><a href="../template/index.html">Privacy Policy</a></li>
+            <li><a href="../template/pricing.html">Term Of Services</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">ERP Tribe @ 2024 - All Rights Reserved</p>
+    </footer>
+
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>

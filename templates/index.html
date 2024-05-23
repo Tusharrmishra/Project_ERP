@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="x-icon" href="../static/images/logo.png" />
+    <title>ERP Builder</title>
+    <link rel="stylesheet" href="../static/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <div class="logo">
+            <a href="../template/index.html"
+              ><img src="../static/images/logo.png"
+            /></a>
+          </div>
+          <div class="box">
+            <nav>
+              <ul id="MenuItems">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/about">About us</a></li>
+                <li><a href="/contact">Contact</a></li>
+                {% if 'username' in session %}
+                <li><a href="#"> {{ session['username'] }}</a></li>
+                <li><a href="/logout">Logout</a></li>
+                {% else %}
+                <a href="/login" class="btn">Login</a>
+                <!-- Modified Login link -->
+                <a href="/signup" class="btn btn-primary">Sign Up</a>
+                <!-- Modified Sign Up link -->
+                {% endif %}
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-2">
+            <h1>
+              ERP Systems for <br />
+              Small and Medium <br />
+              Enterprises
+            </h1>
+            <p>
+              Our web application provides an innovative,all-in-one solution for
+              managing your business operations.Whether your company is just
+              starting out or expanding, our ERP system can help you simplify
+              workflows,increase productivity, and improve customer satisfaction
+            </p>
+          </div>
+          <div id="col-2">
+            <img src="../static/images/logo.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <div class="small-container">
+        <h1>
+          Overview of ERP System for<br />
+          Small and Medium Enterprises
+        </h1>
+
+        <div class="row">
+          <div class="col-3">
+            <h2>Centralized Dashboard</h2>
+            <p>
+              Get a real-time overview of your business performance with our
+              easy-to-use dashboard.
+            </p>
+            <a href="/run_dashboard">
+              <img src="../static/images/dash.png" />
+            </a>
+          </div>
+          <div class="col-3">
+            <h2>Automated Scheduling</h2>
+            <p>
+              Effortlessly schedule meetings, manage appointments, and tasks
+              with our automated system.
+            </p>
+            <img src="../static/images/scheduling.png" />
+          </div>
+          <div class="col-3">
+            <h2>Inventory Management</h2>
+            <p>
+              Track your Inventory levels,set alerts for low stock, and generate
+              reports on your stock levelsaat
+            </p>
+            <a href="/inventory">
+              <img src="../static/images/inventory.avif" />
+            </a>
+          </div>
+          <div class="col-3">
+            <h2>Customer Support</h2>
+            <p>
+              Provide excellent customer support with our integrated ticketing
+              system.
+            </p>
+            <img src="../static/images/customer.jpg" />
+          </div>
+          <div class="col-3">
+            <h2>YouTube Links</h2>
+            <p>
+              Provide you YouTube links related to your business for Marketing
+              and Growth of your Business.
+            </p>
+            <img src="../static/images/youtube.avif" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container1">
+      <div class="left-panel">
+        <img src="../static/images/benefits.png" />
+        <p id="p1">
+          Benefits of using our<br />
+          web application
+        </p>
+        <button id="signup-button">Sign up now</button>
+      </div>
+      <div class="left-panel">
+        <h3>Increased Efficiency</h3>
+        <p>
+          Our ERP system streamlines workflows,<br />
+          eliminates errors, and reduces manual<br />
+          work.
+        </p>
+        ___________________________________________
+        <h3>Better Decision Making</h3>
+        <p>
+          Get a clear picture of your business<br />
+          performance, analyze data, and make<br />
+          informed decisions.
+        </p>
+        _______________________________________________
+        <h3>Enhanced Customer Experience</h3>
+        <p>
+          Deliver excellent customer service with<br />
+          better insights and faster resolution<br />
+          times.
+        </p>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="small-container">
+        <h1>Features of Our ERP System</h1>
+        <div class="row">
+          <div class="col-3">
+            <h3>Human Resource</h3>
+            <p>
+              Manage your employees, job openings, payroll, and benefits in one
+              place.
+            </p>
+          </div>
+          <div class="col-3">
+            <h3>Sales and Marketing</h3>
+            <p>
+              Create and execute marketing campaigns, manage leads, and close
+              deals faster.
+            </p>
+          </div>
+          <div class="col-3">
+            <h3>Financial</h3>
+            <p>
+              Track expenses, generate invoices, and manage your finances with
+              ease.
+            </p>
+          </div>
+          <div class="col-3">
+            <h3>Supply Chain</h3>
+            <p>
+              Streamline your supply chain operations, optimize inventory, and
+              reduce fulfillment time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row">
+        <div class="col">
+          <img src="../static/images/logo.png" class="logo1" />
+          <p></p>
+        </div>
+        <div class="col">
+          <ul>
+            <li><a href="../template/index.html">Home</a></li>
+            <li><a href="../template/pricing.html">Pricing</a></li>
+            <li><a href="../template/about_us.html">About Us</a></li>
+            <li><a href="../template/contact_us.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="social-icons">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/"><img src="" />Facebook</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/"><img src="" />Twitter</a>
+            </li>
+            <li>
+              <a href="https://www.whatsapp.com/"><img src="" />What's App</a>
+            </li>
+            <li>
+              <a href="https://www.discord.com/"><img src="" />Discord</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <ul>
+            <li><a href="index.html">Privacy Policy</a></li>
+            <li><a href="../template/pricing.html">Term Of Services</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">ERP Tribe @ 2024 - All Rights Reserved</p>
+    </footer>
+    <script src="../static/javascript/main.js"></script>
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>

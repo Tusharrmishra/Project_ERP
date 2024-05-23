@@ -1,0 +1,62 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="../static/css/payment.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form
+        id="pay1"
+        action="/payment?plan={{ request.args.get('plan') }}"
+        method="POST"
+      >
+        <h1>Payment Form</h1>
+        <span>cards accepted :</span>
+        <img src="../new/card_img.png" alt="" />
+        <p>Name on Card:*<input type="text" name="name" required="" /></p>
+
+        <p>
+          Email:*
+          <input type="email" name="email" id="email" value="" required="" />
+        </p>
+
+        <h2>Payment Information</h2>
+        <p>
+          Card Type:*
+          <select name="card_type" id="card_type" required="">
+            <option value="">---selecr a Card type--</option>
+            <option value="visa">Visa</option>
+            <option value="rupy">Rupay</option>
+            <option value="master card">Master Card</option>
+            <option value="american express">American Express</option>
+          </select>
+        </p>
+        <p>
+          Card Number *<input
+            type="text"
+            name="card_number"
+            id="Card Number"
+            required=""
+            maxlength="16"
+          />
+          <span id="cardNumberError" class="error-message"></span>
+        </p>
+        <p>
+          Expiration Date:*
+          <input type="date" name="exp_date" id="exp_date" required="" />
+        </p>
+        <p>CVV * <input type="password" name="cvv" id="CVV" required="" /></p>
+        <a href="#" onclick="redirectToProcessing()">
+          <input type="submit" name="btn1" id="btn1" value="Pay Now" />
+        </a>
+      </form>
+    </div>
+    <script src="../static/javascript/payment.js"></script>
+    <!-- <script>
+      function redirectToProcessing() {
+        window.location.href = "../templates/processing.html";
+      }
+    </script> -->
+  </body>
+</html>
