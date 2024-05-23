@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Inventory</title>
+    <link rel="stylesheet" href="../static/css/inv_css.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="back-icon">
+          <a href="#" class="back-link">&larr;</a>
+        </div>
+        <a class="navbar-brand" href="#">INVENTORY </a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="home_section">
+        <div class="topbar">
+          <div class="toggle">
+            <i class="bx bx-menu" id="btn"></i>
+          </div>
+        </div>
+      </section>
+      <section id="inventory">
+        <!-- Add this inside the inventory section -->
+        <section id="upload-excel">
+          <h2>Upload Excel Sheet</h2>
+          <form id="excel-upload-form" action="/">
+            <input type="file" id="excel-file" accept=".xlsx, .xls" required />
+            <button type="button" onclick="uploadExcel()">Upload</button>
+          </form>
+        </section>
+        <h2>Current Inventory</h2>
+        <ul id="inventory-list">
+          <section id="display-data" style="display: none;">
+            <h2>Uploaded Data</h2>
+            <table id="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in inventory %}
+              <!-- <tr>
+                          <td>{{ item.id }}</td>
+                          <td>{{ item.name }}</td>
+                          <td>${{ item.price }}</td>
+                      </tr> -->
+              {% endfor %}
+            </tbody>
+          </table>
+          <!-- Inventory items will be dynamically added here -->
+        </ul>
+      </section>
+      <div class="container">
+        <button onclick="toggleSection('search')" class="button-style">
+          Search Inventory
+        </button>
+        <button onclick="toggleSection('add-item')" class="button-style">
+          Add New Item
+        </button>
+        <button onclick="toggleSection('remove-item')" class="button-style">
+          Remove Item
+        </button>
+        <button onclick="toggleSection('update-quantity')" class="button-style">
+          Update Quantity
+        </button>
+
+        <section id="search" style="display: none">
+          <h2>Search Inventory</h2>
+          <form action="/search" method="post">
+            <label for="search-item">Item Name:</label>
+            <input type="text" id="search-item" name="search-item" required />
+            <button type="submit">Search</button>
+          </form>
+        </section>
+
+        <section id="add-item" style="display: none">
+          <h2>Add New Item</h2>
+          <form action="/add-item" method="post">
+            <label for="item-name">Item Name:</label>
+            <input type="text" id="item-name" name="item-name" required />
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required />
+            <button type="submit">Add Item</button>
+          </form>
+        </section>
+
+        <section id="remove-item" style="display: none">
+          <h2>Remove Item</h2>
+          <form action="/remove-item" method="post">
+            <label for="remove-item">Item Name:</label>
+            <input type="text" id="remove-item" name="remove-item" required />
+            <button type="submit">Remove Item</button>
+          </form>
+        </section>
+
+        <section id="update-quantity" style="display: none">
+          <h2>Update Quantity</h2>
+          <form action="/update_quantity" method="post">
+            <label for="update-item">Item Name:</label>
+            <input type="text" id="update-item" name="update-item" required />
+            <label for="new-quantity">New Quantity:</label>
+            <input
+              type="number"
+              id="new-quantity"
+              name="new-quantity"
+              required
+            />
+            <button type="submit">Update Quantity</button>
+          </form>
+        </section>
+        <footer>
+          <p>&copy; 2024 Inventory Management System</p>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      function toggleSection(sectionId) {
+        var sections = document.querySelectorAll("section");
+        sections.forEach(function (section) {
+          if (section.id === sectionId) {
+            section.style.display = "block";
+          } else {
+            section.style.display = "none";
+          }
+        });
+      }
+
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        // call function
+        changeBtn();
+      });
+
+      function changeBtn() {
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else {
+          closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+      }
+    </script>
+  </body>
+</html>

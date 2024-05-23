@@ -1,0 +1,130 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.75rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.813rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../images/background.png");
+  background-color: #f0f0f0;
+  margin-top: 100px;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  width: 25%;
+  background-color: hsla(0, 0%, 10%, 0.1);
+  padding: 2.5rem 1.5rem;
+  margin-inline: 1.5rem;
+  border-radius: 1em;
+  border: 2px solid var(--white-color);
+  backdrop-filter: blur(8px);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+.header {
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.header h1 {
+  color: black;
+}
+.instructions {
+  background-color: lightgreen;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 35px;
+  margin-right: 35px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.btn {
+  background-color: #7dfd4e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff0101;
+}
+
+/* form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #7dfd4e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #fff;
+} */

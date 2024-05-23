@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="x-icon" href="../static/images/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/pricing.css" />
+
+    <title>Pricing</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="logo">
+          <a href="../template/index.html"
+            ><img src="../static/images/logo.png"
+          /></a>
+        </div>
+        <div class="box">
+          <nav>
+            <ul id="MenuItems">
+              <li><a href="/index">Home</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li><a href="/about">About us</a></li>
+              <li><a href="/contact">Contact</a></li>
+              {% if 'username' in session %}
+              <li><a href="#"> {{ session['username'] }}</a></li>
+              <li><a href="/logout">Logout</a></li>
+              {% else %}
+              <a href="/login" class="btn">Login</a>
+              <!-- Modified Login link -->
+              <a href="/signup" class="btn btn-primary">Sign Up</a>
+              <!-- Modified Sign Up link -->
+              {% endif %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id="heading">
+        <h1>Pricing</h1>
+        <p>
+          Our pricing is not expensive, but it's not<br />
+          cheap either, it's exactly what it should be
+        </p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="card">
+        <div class="content">
+          <div class="title">Basic</div>
+          <div class="price">$9 / month</div>
+          <div class="description">For individuals and small teams</div>
+        </div>
+        <a href="/payment?plan=basic" class="btn1" name="btn1">
+          Started with Basic</a
+        >
+      </div>
+
+      <div class="card">
+        <div class="content">
+          <div class="title">Pro</div>
+          <div class="price">$19 / month</div>
+          <div class="description">For startups and growing businesses</div>
+        </div>
+        <a href="/payment?plan=pro" class="btn1" name="btn1"
+          >Get Started with Pro</a
+        >
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="title">Business</div>
+          <div class="price">$99 / month</div>
+          <div class="description">For organizations with advanced needs</div>
+        </div>
+        <a href="/payment?plan=business" class="btn1" name="btn1"
+          >Get Started with Business</a
+        >
+      </div>
+    </div>
+    <div id="heading2">
+      <h1>Compare Feature</h1>
+    </div>
+    <div class="comparison-table">
+      <div class="plan">
+        <h2>Basic</h2>
+        <div class="feature">
+          <span class="feature-check">✔</span> Process Analysis
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Task Management
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Time Tracking
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Performance Metrics
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Customizable Reports
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Email Intergration
+        </div>
+
+        <!-- Add other features for Basic plan -->
+      </div>
+      <div class="plan">
+        <h2>Pro</h2>
+        <div class="feature">
+          <span class="feature-check">✔</span> Process Analysis
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Task Management
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Time Tracking
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Performance Metrics
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Customizable Reports
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Email Intergration
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Real-Time Collaboration
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Automated Workflows
+        </div>
+        <!-- Add other features for Pro plan -->
+      </div>
+      <div class="plan">
+        <h2>Business</h2>
+        <div class="feature">
+          <span class="feature-check">✔</span> Process Analysis
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Task Management
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Time Tracking
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Performance Metrics
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Customizable Reports
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Email Intergration
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Real-Time Collaboration
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Automated Workflows
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> Analytics Dashboard
+        </div>
+        <div class="feature">
+          <span class="feature-check">✔</span> SLA Management
+        </div>
+        <!-- Add other features for Business plan -->
+      </div>
+    </div>
+    <div class="card1">
+      <div class="box1">
+        <div class="row1">
+          <div class="col-2">
+            <h2>Get Started with ERP Builder Today</h2>
+            <p>Start optimizing our process today</p>
+            <a href="../template/signup.html" class="btn2">Sign Up Now</a>
+          </div>
+          <div id="col-2">
+            <img src="../static/images/logo.png" class="logo2" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="col">
+          <img src="../static/images/logo.png" class="logo1" />
+          <p></p>
+        </div>
+        <div class="col">
+          <ul>
+            <li><a href="../template/index.html">Home</a></li>
+            <li><a href="../template/pricing.html">Pricing</a></li>
+            <li><a href="../template/about_us.html">About Us</a></li>
+            <li><a href="../template/contact_us.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="social-icons">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/"><img src="" />Facebook</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/"><img src="" />Twitter</a>
+            </li>
+            <li>
+              <a href="https://www.whatsapp.com/"><img src="" />What's App</a>
+            </li>
+            <li>
+              <a href="https://www.discord.com/"><img src="" />Discord</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <ul>
+            <li><a href="../template/index.html">Privacy Policy</a></li>
+            <li><a href="../template/pricing.html">Term Of Services</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">ERP Tribe @ 2024 - All Rights Reserved</p>
+    </footer>
+    <script src="../static/javascript/pricing.js"></script>
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>

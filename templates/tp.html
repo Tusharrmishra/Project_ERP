@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("../static/images/background.png");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .confirmation-box {
+        text-align: center;
+      }
+
+      .container {
+        background-color: #fffcfcd0;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      p {
+        color: #0f0e0e;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+      .cross-symbol {
+        position: relative;
+        width: 50px;
+        height: 50px;
+      }
+
+      .cross-symbol::before,
+      .cross-symbol::after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        background-color: black;
+        top: 50%;
+        margin-left: 360px;
+        transform-origin: center;
+      }
+
+      .cross-symbol::before {
+        transform: rotate(45deg);
+      }
+
+      .cross-symbol::after {
+        transform: rotate(-45deg);
+      }
+      .cross-symbol:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <img
+        src="../static/images/remove.png"
+        alt="remove"
+        style="width: 100px; height: 100px; margin-bottom: 20px"
+      /> -->
+      <a href="../template/admin_page1(dashboard).html">
+        <div class="cross-symbol"></div>
+      </a>
+      <div class="confirmation-box">
+        <h1>Are you sure you want to logout?</h1>
+        <p>You will be logged out of your account.</p>
+        <a class="btn" href="../template/index.html">Logout</a>
+      </div>
+    </div>
+  </body>
+</html>

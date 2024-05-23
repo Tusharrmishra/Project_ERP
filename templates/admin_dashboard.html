@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Admin & Dashboard</title>
+    <link rel="stylesheet" href="../static/css/admin_page1.css" />
+    <link rel="shortcut icon" type="x-icon" href="../static/images/logo.png" />
+    <!-- box icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo_details">
+        <!-- <img src="logo.png"> -->
+        <div class="logo_name">ERP Developer</div>
+      </div>
+      <ul>
+        <li>
+          <a href="#" class="active">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name"> Dashboard </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-user"></i>
+            <span class="links_name"> Profile </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-truck"></i>
+            <span class="links_name"> Sales </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bx-cart-alt"></i>
+            <span class="links_name"> Order </span>
+          </a>
+        </li>
+        <li class="login">
+          <a href="../template/index.html">
+            <span class="links_name login_out"> Login Out </span>
+            <i class="bx bx-log-out" id="log_out"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file" />
+      <input type="submit" value="Upload" />
+    </form>
+    <!-- End Sideber -->
+    <section class="home_section">
+      <div class="topbar">
+        <div class="toggle">
+          <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="search_wrapper">
+          <label>
+            <span>
+              <i class="bx bx-search"></i>
+            </span>
+            <input type="search" placeholder="Search..." />
+          </label>
+        </div>
+        <div class="user_wrapper">
+          <img src="logo.png" alt="" />
+        </div>
+      </div>
+      <!-- End Top Bar -->
+      <div class="card-boxes">
+        <div class="box">
+          <div class="right_side">
+            <div class="numbers">9.99</div>
+            <div class="box_topic">Total Order</div>
+          </div>
+          <i class="bx bx-cart-alt"></i>
+        </div>
+        <div class="box">
+          <div class="right_side">
+            <div class="numbers">15.9</div>
+            <div class="box_topic">Total Sales</div>
+          </div>
+          <i class="bx bxs-cart-add"></i>
+        </div>
+        <div class="box">
+          <div class="right_side">
+            <div class="numbers">30.20</div>
+            <div class="box_topic">Total Customers</div>
+          </div>
+          <i class="bx bx-cart"></i>
+        </div>
+        <div class="box">
+          <div class="right_side">
+            <div class="numbers">50.9</div>
+            <div class="box_topic">Total Return</div>
+          </div>
+          <i class="bx bxs-cart-download"></i>
+        </div>
+      </div>
+      <!-- End Card Boxs -->
+      <div class="details">
+        <div class="recent_project">
+          <div class="card_header">
+            <h2>Current Customers</h2>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td>Business Name</td>
+                <td>Payment</td>
+                <td>Product Delivery Status</td>
+                <td>Company Details</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Serene Haven Retreats</td>
+                <td>$11,000</td>
+                <td>
+                  <span class="badge bg_seccuss"> Done </span>
+                </td>
+                <td>
+                  <span class="img_group">
+                    <img src="img/avatar-2.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <img src="img/avatar-3.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <img src="img/avatar-4.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <span class="initial">+5</span>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>Bright Horizon Ventures</td>
+                <td>$6,700</td>
+                <td>
+                  <span class="badge bg_danger"> Canceled </span>
+                </td>
+                <td>
+                  <span class="img_group">
+                    <img src="img/avatar-5.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <img src="img/avatar-2.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <img src="img/avatar-3.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <span class="initial">+5</span>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>Peak Performance Solutions</td>
+                <td>$8,500</td>
+                <td>
+                  <span class="badge bg_info"> Dispatched </span>
+                </td>
+                <td>
+                  <span class="img_group">
+                    <img src="img/avatar-4.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <img src="img/avatar-5.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <img src="img/avatar-2.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <span class="initial">+1</span>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>Quantum Dynamics Innovations</td>
+                <td>$12,300</td>
+                <td>
+                  <span class="badge bg_worning"> Delayed </span>
+                </td>
+                <td>
+                  <span class="img_group">
+                    <img src="img/avatar-3.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <img src="img/avatar-4.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <img src="img/avatar-5.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <span class="initial">+5</span>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>Harmony Haven Wellness</td>
+                <td>$15,800</td>
+                <td>
+                  <span class="badge bg_seccuss"> Done </span>
+                </td>
+                <td>
+                  <span class="img_group">
+                    <img src="img/avatar-2.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <img src="img/avatar-3.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <img src="img/avatar-4.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <span class="initial">+5</span>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>Tranquil Oasis Enterprises</td>
+                <td>$9,200</td>
+                <td>
+                  <span class="badge bg_info"> Dispatched </span>
+                </td>
+                <td>
+                  <span class="img_group">
+                    <img src="img/avatar-5.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <img src="img/avatar-2.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <img src="img/avatar-3.jpg" alt="" />
+                  </span>
+                  <span class="img_group">
+                    <span class="initial">+1</span>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="recent_customers">
+          <div class="card_header">
+            <h2>New Customers</h2>
+          </div>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="info_img">
+                    <img src="img/avatar-2.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Swift Summit Solutions</h4>
+                  <span>sssol@gmail.com</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="info_img">
+                    <img src="img/avatar-3.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Vanessa Tucker</h4>
+                  <span>Vanessa@gmail.com</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="info_img">
+                    <img src="img/avatar-4.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Nova Nexus Technologies</h4>
+                  <span>nntechno@gmail.com</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="info_img">
+                    <img src="img/avatar-5.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Pinnacle Pursuits Group</h4>
+                  <span>pinnaclepg@gmail.com</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="info_img">
+                    <img src="img/avatar-2.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Stellar Spark Enterprises</h4>
+                  <span>sparkerp@gmail.com</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="info_img">
+                    <img src="img/avatar-3.jpg" alt="" />
+                  </div>
+                </td>
+                <td>
+                  <h4>Elysium Elevation Enterprises</h4>
+                  <span>eelevationerp@gmail.com</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        // call function
+        changeBtn();
+      });
+
+      function changeBtn() {
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else {
+          closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!--  <li>
+          <a href="#">
+            <i class="bx bxs-user-plus"></i>
+            <span class="links_name"> Customers </span>
+          </a>
+        </li> -->

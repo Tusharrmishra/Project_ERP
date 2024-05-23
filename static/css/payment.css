@@ -1,0 +1,56 @@
+body {
+  padding: 25px;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+.container {
+  text-align: center;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+.container form {
+  background: #fff;
+  box-shadow: 0 0 7px rgb(0, 0, 0);
+  height: 600px;
+}
+#pay1 {
+  background-color: hsla(0, 0%, 1%, 0.1);
+  border: 2px solid var(--white-color);
+  margin-inline: 4rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+}
+#btn1 {
+  width: 70%;
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+  /* background-color: var(--white-color); */
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+input {
+  border-radius: 5px; /* Added */
+}
+select {
+  border-radius: 5px;
+}
+
+.error-message {
+  color: red;
+}
+
+/* #exp_date {
+  width: 20%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  /* background-color: var(--white-color); 
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  margin-bottom: 2rem;
+} */
